@@ -1,0 +1,612 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landingCon {
+  width: 100%;
+  background-image: url("../public//images//bgImg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.whatWeDoBar {
+  transform: skew(-17deg);
+}
+
+.searchMenuCon {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0vh;
+  background: white;
+  z-index: 99;
+  transition: all 1s;
+}
+
+.searchMenuConClicked {
+  height: 100vh;
+}
+
+.cMBgImg {
+  height: 600px;
+  background-image: url("../public/images/cmBgImg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.domBgImg {
+  height: 600px;
+  background-image: url("../public/images/domBgImg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  height: 0vh;
+}
+
+.searchInputBox {
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 10px 5px gray;
+}
+
+.searchMenuInnerCon {
+  filter: blur(100px);
+  transition: all 2s;
+}
+
+.openContent {
+  filter: blur(0px);
+}
+
+/* animate arrow */
+.arrowIcon {
+  transform: translateX(-480%);
+  transition: all 0.5s;
+}
+
+.animateArrow {
+  transform: translateX(60%);
+}
+
+.reset-element {
+  all: revert;
+}
+
+.activeIndex {
+  width: 3px;
+  height: 30px;
+  background: #ffffff;
+}
+
+@keyframes animateNumbers1 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes animateNumbers2 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-400px);
+  }
+}
+
+@keyframes animateNumbers3 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-600px);
+  }
+}
+
+.animateCon {
+  overflow: hidden;
+}
+
+@keyframes loopImage {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-750%);
+  }
+}
+
+.animateImage {
+  animation: loopImage 5s infinite ease-in;
+}
+
+.animateLeftToRight {
+  animation: leftToRights 2.5s ease-in-out;
+}
+
+@keyframes leftToRights {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+.animateFromLeftToRight {
+  animation: leftToRight 1s infinite ease-in-out;
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.sticky-fixed {
+  position: fixed;
+  margin-top: 13vh;
+  z-index: -10;
+}
+
+.productInActiveSlide {
+  position: absolute;
+  bottom: 0;
+  left: 3rem;
+  height: 200px;
+  /* transition: all 0.8s; */
+}
+
+.sliderImg {
+  object-fit: contain;
+}
+
+.productActiveSlide {
+  transform: scaleY(2);
+  /* transition: all 0.8s; */
+}
+
+.activeSlide {
+  transform: scaleY(2);
+  transition: all 0.2s;
+}
+
+.boxShadow {
+  box-shadow: 1px 1px 5px 2px gray;
+}
+
+.beforeAnimateDiv {
+  position: relative;
+  overflow: hidden;
+  transform: translateX(-300px);
+  transition: all 1s ease;
+}
+
+.animateDiv {
+  transform: translateX(50px);
+}
+
+.logoBeforeAnimate {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+/* .form-control{
+  margin-left:1.2rem;
+}
+.flag-dropdown{
+  width: 4rem; */
+
+.animateLogo {
+  opacity: 1;
+}
+
+.active {
+  width: 80%;
+  opacity: 1;
+}
+
+.restSlides {
+  transition: all 1s;
+}
+
+.graySection {
+  transition: all 1s;
+}
+
+.graySectionActive {
+  width: 100%;
+}
+
+.globalSearchInput::placeholder {
+  left: 1rem;
+}
+
+.placeHolderChangingText::after {
+  content: "Industry";
+  animation: spinText 4s linear infinite;
+  top: 0;
+  left: 0;
+}
+
+@keyframes spinText {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  50%,
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    content: "Application";
+    opacity: 1;
+  }
+}
+
+.child {
+  /* display: none; */
+  width: 0%;
+  transition: all 1s;
+}
+
+.activeChild {
+  width: 100%;
+}
+
+.photo {
+  transition: all 2s;
+}
+
+.edgeBar {
+  transform: skew(-15deg);
+  transition: transform 5s ease-in;
+  z-index: 0;
+}
+
+.animateBar {
+  z-index: 9999;
+  transform: scale(800);
+  transition: all 3000ms ease-in-out;
+  overflow: hidden;
+}
+
+@media only screen and (max-width:800px){
+  .animateBar {
+    z-index: 9999;
+    transform: scale(800);
+    transition: all 1500ms ease-in-out;
+  }
+}
+
+.mainSection {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.innerSection {
+  min-width: 40%;
+}
+
+.spacing_xs {
+  padding: 2rem;
+}
+
+.spacing_sm {
+  padding: 4rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .spacing_sm {
+    padding: 2rem;
+  }
+}
+
+.spacing_md {
+  padding: 3.75rem;
+}
+
+@media only screen and (max-width: 950px) {
+  .spacing_md {
+    padding: 1.75rem;
+  }
+}
+
+.spacing_lg {
+  padding: 4.685rem;
+}
+
+@media only screen and (max-width: 950px) {
+  .spacing_lg {
+    padding: 3.5rem;
+  }
+}
+
+.spacing_xl {
+  padding: 10rem;
+}
+
+.center-image {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+.custom-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  /* Adjust as needed */
+}
+
+.dot-container {
+  cursor: pointer;
+  margin: 0 8px;
+  /* Adjust spacing between dots */
+}
+
+.outer-circle {
+  width: 20px;
+  /* Adjust the size of the outer circle */
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ef4136;
+}
+
+.inner-dot {
+  width: 10px;
+  /* Adjust the size of the inner dot */
+  height: 10px;
+  border-radius: 50%;
+  /* Color of the inner dot */
+}
+
+.react-input {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-dots-custom {
+  bottom: -50px !important;
+}
+
+.fade-element {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  /* Adjust the duration and easing function as needed */
+}
+
+.hidden-element {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  /* Disable pointer events when hidden to prevent interactions */
+}
+
+.react-tel-input .form-control {
+  height: 3.5rem !important;
+  width: 100% !important;
+}
+
+@media (max-width: 600px) {
+  .react-tel-input .form-control {
+    height: 3.5rem !important;
+    width: 100%;
+    /* Adjust the height for xs screens */
+  }
+}
+
+/* .rounded{
+  border-radius: 50%;
+} */
+
+.hideLongTypography2 {
+  overflow: hidden;
+  display: flex;
+  line-clamp: 2;
+  /* number of lines to show */
+  box-orient: vertical;
+}
+
+.hideLongTypography4 {
+  overflow: hidden;
+  display: flex;
+  line-clamp: 4;
+  /* number of lines to show */
+  box-orient: vertical;
+}
+
+/*  custom-manufacturing  */
+.headerImg {
+  background-image: url("../public/images/custom-manufacturing-banner.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.heroSection {
+  clip-path: polygon(0 0, 60% 0, 45% 100%, 0 100%);
+}
+
+.custom-slick-dots {
+  bottom: -70px !important;
+  position: relative;
+  left: -30%;
+  background-color: #fff;
+  border-radius: 1rem;
+  height: 30px;
+}
+
+.slick-custom-ul > li {
+  width: 50px !important;
+}
+
+.selected-flag {
+  width: 3rem;
+}
+
+.form-control {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .custom-slick-dots {
+    left: 0;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.product-slider .slick-track {
+  height: 28rem !important;
+}
+
+.product-slider .slick-initialized .slick-slide {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-end !important;
+}
+
+.expertise-card {
+  opacity: 0;
+  width: 2%;
+  height: 100%;
+  /* pointer-events: none;  */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.expertise-card.show {
+  opacity: 1;
+  width: 70%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+@media screen and (max-height: 575px) {
+  #rc-imageselect,
+  .g-recaptcha {
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+/* html {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-element {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: center;
+  perspective: 200px;
+}  */
+
+ .animate-header{
+  /* height: 100vh; */
+  opacity: 1;
+  transition: all 400ms ease-in;
+}
+
+.top-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-overlay{
+  display: relative;
+}
+.bg-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Change the color and opacity as needed */
+}
+
+.bg-product{
+  display: relative;
+}
+.bg-product::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Change the color and opacity as needed */
+}
+
+
+.fadeOut {
+  animation: fadeout 1300ms ease-in;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header-shadow{
+  box-shadow:  0px 1px 2px #00000014 !important;
+}

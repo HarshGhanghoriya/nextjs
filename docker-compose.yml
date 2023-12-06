@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  elchemy-fe:
+    image: elchemy-fe:latest
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: elchemy-frontend
+    restart: always
+    ports:
+      - 3212:3212
+

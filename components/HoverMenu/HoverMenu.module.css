@@ -1,0 +1,43 @@
+.menu, .drop-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+}
+
+.drop-menu {
+    
+    opacity: 0;
+    display: none;
+    transition: all 300ms !important;
+    position: absolute;
+    box-shadow: 0px 4px 12px 0px #00000014;
+    z-index: 100000;
+    background-color: #fff;
+    min-width: max-content;
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    top:20px;
+}
+
+.drop-menu-item {
+    width: 100%;
+    color: #000;
+    padding:10px 10px !important;
+    
+}
+
+/* .drop-menu-item:hover {
+    background-color: #eee;
+} */
+
+
+.menu-item:hover .drop-menu {
+    opacity: 1;
+    display: block
+}
